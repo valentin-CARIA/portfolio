@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projet index{% endblock %}
+
+{% block body %}
+    <section id="projetn1">
+        <h1>Projet index</h1>
+        <a href="{{ path('app_images_projet_index') }}">liste image projet</a>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Technologie</th>
+                <th>Charge</th>
+                <th>Periode</th>
+                <th>Besoins</th>
+                <th>Bilan</th>
+                <th>Images</th>
+                <th>actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for projet in projets %}
+                <tr>
+                    <td>{{ projet.id }}</td>
+                    <td>{{ projet.nom }}</td>
+                    <td>{{ projet.technologie }}</td>
+                    <td>{{ projet.charge }}</td>
+                    <td>{{ projet.periode }}</td>
+                    <td>{{ projet.besoins }}</td>
+                    <td>{{ projet.bilan }}</td>
+                    <td>
+                        {% for image in projet.imagesProjets %}
+                            {{ image.nomFichier }}
+                        {% endfor %}
+                    </td>
+                    <td>
+                        <a href="{{ path('app_projet_show', {'id': projet.id}) }}">voir</a>
+                        <a href="{{ path('app_projet_edit', {'id': projet.id}) }}">modifier</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="9">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{{ path('app_projet_new') }}">Créer nouveaux projet</a>
+    </section>
+{% endblock %}

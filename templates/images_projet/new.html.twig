@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ImagesProjet{% endblock %}
+
+{% block body %}
+    <section id="projetn5">
+        <h1>ajouter une nouvelle ImagesProjet</h1>
+        {% for message in app.flashes('imageError') %}
+            <div class="flash-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+        {{ include('images_projet/_form.html.twig') }}
+
+        <a href="{{ path('app_images_projet_index') }}">retour dans la liste</a>
+    </section>
+{% endblock %}

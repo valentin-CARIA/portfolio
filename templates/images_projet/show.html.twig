@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ImagesProjet{% endblock %}
+
+{% block body %}
+    <section id="projetn3">
+        <h1>ImagesProjet</h1>
+
+        <table class="table">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ images_projet.id }}</td>
+            </tr>
+            <tr>
+                <th>NomFichier</th>
+                <td>{{ images_projet.nomFichier }}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <a href="{{ path('app_images_projet_index') }}">retour dans la liste</a>
+
+        <a href="{{ path('app_images_projet_edit', {'id': images_projet.id}) }}">modifier</a>
+
+        {{ include('images_projet/_delete_form.html.twig') }}
+    </section>
+{% endblock %}

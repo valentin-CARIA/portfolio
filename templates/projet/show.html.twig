@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projet{% endblock %}
+
+{% block body %}
+    <section id="projetn7">
+        <h1>Projet</h1>
+
+        <table class="table">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ projet.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ projet.nom }}</td>
+            </tr>
+            <tr>
+                <th>Technologies</th>
+                <td>{{ projet.technologie }}</td>
+            </tr>
+            <tr>
+                <th>Charge</th>
+                <td>{{ projet.charge }}</td>
+            </tr>
+            <tr>
+                <th>Periode</th>
+                <td>{{ projet.periode }}</td>
+            </tr>
+            <tr>
+                <th>Besoins</th>
+                <td>{{ projet.besoins }}</td>
+            </tr>
+            <tr>
+                <th>Bilan</th>
+                <td>{{ projet.bilan }}</td>
+            </tr>
+            <tr>
+                <th>Images</th>
+                {% for image in projet.imagesProjets %}
+                    <td>{{ image.nomFichier }}</td>
+                {% endfor %}
+            </tr>
+            </tbody>
+        </table>
+
+        <a href="{{ path('app_projet_index') }}">retour dans la liste</a>
+
+        <a href="{{ path('app_projet_edit', {'id': projet.id}) }}">modifier</a>
+
+        {{ include('projet/_delete_form.html.twig') }}
+    </section>
+{% endblock %}

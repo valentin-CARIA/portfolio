@@ -1,0 +1,484 @@
+body {
+    background-color: lightgray;
+    overflow-x: hidden;
+}
+
+ul {
+
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+#menu {
+    background-image: url("../static/images/backdetente.gif");
+    background-size: cover;
+}
+
+#presentation {
+    background-color: #19003c;
+    background-size: cover;
+}
+
+#tech {
+    background-image: url("../static/images/backdetente.gif");
+    background-size: cover;
+}
+
+#produc {
+    background-color: #19003c;
+    background-size: cover;
+}
+
+#formulate {
+    background-image: url("../static/images/backdetente.gif");
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 1em;
+    text-align: center;
+}
+
+.button {
+    text-decoration: none;
+    border: 1px solid;
+    color: #AE0EBE;
+    display: inline-block;
+    border-radius: 3px;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.button:hover {
+    background-color: #555;
+    color: white;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, .55);
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+#navOk {
+    height: 5em;
+}
+
+.tranparence {
+    background: rgba(255, 255, 255, 0.65);
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+    width: 50em;
+}
+
+#animer {
+    position: relative;
+    left: 15em;
+}
+
+#profil {
+    height: 20em;
+    position: relative;
+    left: 15.5em;
+    border-radius: 52%;
+}
+
+.mid {
+    text-align: center;
+}
+
+#tel {
+    text-align: center;
+}
+
+.col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+svg {
+    height: 7em;
+}
+
+#pose4 {
+    position: relative;
+    left: 23em;
+}
+
+#box {
+    background: rgba(174, 14, 190, 0.65);
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img1, .img2, .img3 {
+    height: 5em;
+}
+
+#pose3 {
+    position: relative;
+    left: 23em;
+    background: unset;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    height: 5em;
+    top: 12em;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.65);
+    padding: 25px;
+    border-radius: 10px 10px 10px 10px;
+    width: 50em;
+    position: relative;
+    left: 22.25em;
+
+}
+
+input {
+    border-radius: 10px 10px 10px 10px
+}
+
+textarea {
+    border-radius: 10px 10px 10px 10px
+}
+
+#pose2, #pose1 {
+    margin: 1em 0;
+}
+
+#connexion {
+    background-image: url("../static/images/backconnex.gif");
+    background-size: cover;
+    height: 37.15em;
+
+}
+
+#projetn1 {
+    background-image: url("../static/images/backdetente.gif");
+    background-size: cover;
+    height: 37.15em;
+    color: white;
+}
+
+th, td {
+    color: white;
+}
+
+#projetn2 {
+    background-image: url("../static/images/backdetente.gif");
+    background-size: cover;
+    height: 37.15em;
+
+}
+
+#projetn3 {
+    background-image: url("../static/images/backdetente.gif");
+    background-size: cover;
+    height: 37.15em;
+
+}
+
+#projetn4 {
+    background-image: url("../static/images/backdetente.gif");
+    background-size: cover;
+    height: 37.15em;
+
+}
+
+#projetn5 {
+    background-image: url("../static/images/backdetente.gif");
+    background-size: cover;
+    height: 37.15em;
+
+}
+
+#projetn6 {
+    background-image: url("../static/images/backdetente.gif");
+    background-size: cover;
+    height: 51.15em;
+
+}
+
+#projetn7 {
+    background-image: url("../static/images/backdetente.gif");
+    background-size: cover;
+    height: 37.15em;
+
+}
+
+#projetn8 {
+    background-image: url("../static/images/backdetente.gif");
+    background-size: cover;
+    height: 56.15em;
+    color: white;
+}
+
+@media screen and (max-device-width: 1100px) {
+    #navOk {
+        height: 5em;
+    }
+
+    .nav-link {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .tranparence {
+        background: rgba(255, 255, 255, 0.65);
+        padding: 20px;
+        border-radius: 10px 10px 10px 10px;
+        width: 30em;
+    }
+
+    #profil {
+        height: 14em;
+        position: relative;
+        left: 8em;
+        border-radius: 52%;
+    }
+
+    #animer {
+        position: relative;
+        left: 9em;
+    }
+
+    .mid {
+        text-align: center;
+    }
+
+    #tel {
+        text-align: center;
+    }
+
+    svg {
+        height: 5em;
+        position: relative;
+    }
+
+    .font {
+        text-align: center;
+    }
+
+    #box {
+        background: rgba(174, 14, 190, 0.65);
+        padding: 20px;
+        border-radius: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #pose4 {
+        position: relative;
+        left: 9em;
+    }
+
+    .img1 {
+        height: 5em;
+    }
+
+    .img2 {
+        height: 5em;
+    }
+
+    .img3 {
+        height: 5em;
+    }
+
+    #pose3 {
+        position: relative;
+        background: unset;
+        left: 9em;
+    }
+
+    .carousel-control-next {
+        height: 3em;
+        top: 9em;
+    }
+
+    .carousel-control-prev {
+        height: 3em;
+        top: 9em;
+    }
+
+    form {
+        background: rgba(255, 255, 255, 0.65);
+        padding: 25px;
+        border-radius: 10px 10px 10px 10px;
+        width: 30em;
+        position: relative;
+        left: 9em;
+
+    }
+
+    input {
+        border-radius: 10px 10px 10px 10px
+    }
+
+    textarea {
+        border-radius: 10px 10px 10px 10px
+    }
+
+    #pose1 {
+        margin: 1em 0;
+    }
+
+    #pose2 {
+        margin: 1em 0;
+    }
+}
+
+/*format tel*/
+@media screen and (max-device-width: 700px) {
+    #navOk {
+        height: 3em;
+    }
+
+    .nav-link {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .tranparence {
+        background: rgba(255, 255, 255, 0.65);
+        padding: 20px;
+        border-radius: 10px 10px 10px 10px;
+        width: unset;
+    }
+
+    #animer {
+        height: 10em;
+        position: unset;
+    }
+
+    #pose1, #pose2 {
+        margin: 1em 0;
+    }
+
+    #pose2 {
+        width: 81%;
+    }
+
+    #profil {
+        position: relative;
+        left: 55px;
+        border-radius: 52%;
+        height: 7em;
+    }
+
+    .mid {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    #tel {
+        width: 70% !important;
+
+    }
+
+    svg {
+        height: 2em;
+    }
+
+    .row > * {
+        width: 32% !important;
+    }
+
+    .font {
+        font-size: 10px;
+    }
+
+    #tel {
+        position: relative;
+        left: 1.5em;
+    }
+
+    #pose4 {
+        width: 99%;
+        background: unset;
+        position: unset;
+    }
+
+    #pose3 {
+        background: unset;
+        position: unset;
+    }
+
+    #box {
+        background: rgba(255, 255, 255, 0.65);
+        padding: 20px;
+        border-radius: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img1 {
+        height: 3em;
+    }
+
+    .img2 {
+        height: 3em;
+    }
+
+    .img3 {
+        height: 4em;
+    }
+
+    .carousel-control-prev {
+        height: 3em;
+        top: 105em;
+    }
+
+    .carousel-control-next {
+        height: 3em;
+        top: 105em;
+    }
+
+    #carouselExampleControls {
+        width: 209px;
+        left: 2em;
+    }
+
+    form {
+        background: rgba(255, 255, 255, 0.65);
+        padding: 20px;
+        border-radius: 10px 10px 10px 10px;
+        width: unset;
+        position: unset;
+    }
+
+    input {
+        border-radius: 10px 10px 10px 10px
+    }
+
+    textarea {
+        border-radius: 10px 10px 10px 10px
+    }
+
+    #menu {
+        display: none;
+    }
+}
