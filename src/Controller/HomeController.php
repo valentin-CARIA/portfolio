@@ -26,6 +26,7 @@ class HomeController extends AbstractController
             $this->addFlash('sms', 'Votre message a été envoyer');
             return $this->redirectToRoute('app_home');
         }
+
         return $this->render('home/index.html.twig', [
             'form' => $form->createView(),
             'projets' => $projetRepository->findAll(),

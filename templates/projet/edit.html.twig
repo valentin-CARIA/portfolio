@@ -4,11 +4,11 @@
 
 {% block body %}
     <section id="projetn8">
-        <h1>Edit Projet</h1>
+        <h1 class="title1" id="titre8">Edit Projet</h1>
 
         {{ include('projet/_form.html.twig', {'button_label': 'Update'}) }}
 
-        <a href="{{ path('app_projet_index') }}">retour dans la liste</a>
+        <a href="{{ path('app_projet_index') }}" id="link4" class="link">retour dans la liste</a>
 
         {{ include('projet/_delete_form.html.twig') }}
     </section>

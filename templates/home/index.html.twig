@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block title %}Acceuil{% endblock %}
 
 {% block body %}
     <!--mon menue-->
@@ -10,7 +10,7 @@
                 <div>
                     <h1>BIENVENUE</h1>
                     <div class="col-xs-12 col-md-4 profile-picture">
-                        <img id="animer" src={{ asset('static/images/logo2.png') }}>
+                        <img id="animer" alt="img_menue" src={{ asset('static/images/logo2.png') }}>
                     </div>
                 </div>
             </div>
@@ -21,13 +21,14 @@
         <div class="container">
             <div id="pose2" class="tranparence">
                 <h2>MA PRÉSENTATION</h2>
-                <img id="profil" src={{ asset('static/images/IMG_20220105_202541.jpg') }}>
+                <img id="profil" alt="photo de profile" src={{ asset('static/images/IMG_20220105_202541.jpg') }}>
                 <h3>Valentin CARIA</h3>
                 <p class="mid">Étudiant en développement web.</p>
                 <p class="mid">BTS au Lycée St-Vincent.</p>
                 <p class="mid">Mes qualité son mon imagination et ma curiosité.</p>
                 <div id="tel">
-                    <a id="pdf" class="button" href={{ asset('static/CV_Caria.pdf') }} download>Télécharger mon CV
+                    <a id="pdf" class="button" href={{ asset('static/CV.pdf') }} download="CVcaria.pdf">Télécharger mon
+                        CV
                         PDF</a>
                 </div>
                 <div class="row">
@@ -71,33 +72,33 @@
                 <div id="box" class="col-xs-3 col-md-3">
                     <h3>Langages</h3>
                     <div></div>
-                    <img class="img1" src={{ asset('static/images/HTML.png') }}>
-                    <img class="img2" src={{ asset('static/images/CSS.png') }}>
-                    <img class="img2" src={{ asset('static/images/js.png') }}>
-                    <img class="img2" src={{ asset('static/images/php.png') }}>
-                    <img class="img2" src={{ asset('static/images/csharp.png') }}>
-                    <img class="img2" src={{ asset('static/images/python.png') }}>
+                    <img alt="html" class="img1" src={{ asset('static/images/HTML.png') }}>
+                    <img alt="css" class="img2" src={{ asset('static/images/CSS.png') }}>
+                    <img alt="js" class="img2" src={{ asset('static/images/js.png') }}>
+                    <img alt="php" class="img2" src={{ asset('static/images/php.png') }}>
+                    <img alt="C#" class="img2" src={{ asset('static/images/csharp.png') }}>
+                    <img alt="python" class="img2" src={{ asset('static/images/python.png') }}>
                 </div>
                 <div id="box" class="col-xs-3 col-md-3">
                     <h3>Framework & CMS</h3>
                     <div></div>
-                    <img class="img2" src={{ asset('static/images/jquery.png') }}>
-                    <img class="img2" src={{ asset('static/images/Bootstrap.png') }}>
-                    <img class="img2" src={{ asset('static/images/symfony.png') }}>
-                    <img class="img2" src={{ asset('static/images/wordpress.png') }}>
+                    <img alt="jquery" class="img2" src={{ asset('static/images/jquery.png') }}>
+                    <img alt="Bootstrap" class="img2" src={{ asset('static/images/Bootstrap.png') }}>
+                    <img alt="symfony" class="img2" src={{ asset('static/images/symfony.png') }}>
+                    <img alt="wordpress" class="img2" src={{ asset('static/images/wordpress.png') }}>
                 </div>
                 <div id="box" class="col-xs-3 col-md-3">
                     <h3>SGBD</h3>
                     <div></div>
-                    <img class="img3" src={{ asset('static/images/mysql.png') }}>
+                    <img alt="mysql" class="img3" src={{ asset('static/images/mysql.png') }}>
                 </div>
                 <div id="box" class="col-xs-3 col-md-3">
                     <h3>Outils</h3>
                     <div></div>
-                    <img class="img2" src={{ asset('static/images/git.png') }}>
-                    <img class="img2" src={{ asset('static/images/github.png') }}>
-                    <img class="img3" src={{ asset('static/images/ps.png') }}>
-                    <img class="img2" src={{ asset('static/images/gimp.png') }}>
+                    <img alt="git" class="img2" src={{ asset('static/images/git.png') }}>
+                    <img alt="github" class="img2" src={{ asset('static/images/github.png') }}>
+                    <img alt="ps" class="img3" src={{ asset('static/images/ps.png') }}>
+                    <img alt="gimp" class="img2" src={{ asset('static/images/gimp.png') }}>
                 </div>
             </div>
         </div>
@@ -106,13 +107,15 @@
 
     <section id="produc">
         <div id="pose3" class="tranparence">
-            <h2>Mes Projets</h2>
+            <h2 id="colorProjet">Mes Projets</h2>
             {# for de tes projets #}
             {% for projet in projets %}
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div class="modal fade" id="projet_{{ projet.id }}" tabindex="-1"
+                     aria-labelledby="exampleModalLabel"
                      aria-hidden="true">
                     <div class="modal-dialog">
+
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">{{ projet.nom }}</h5>
@@ -132,12 +135,12 @@
                                         le github du site</a>
                                 {% else %}
                                     <a class="btn btn-primary" target="_blank"
-                                       href="{{ asset('uploads/ProjectFolder/' ~ projet.lienProjet ) }}">Visiter
-                                        le
+                                       href="{{ asset('uploads/ProjectFolder/' ~ projet.lienProjet ) }}">Visiter le
                                         site</a>
                                 {% endif %}
                             </div>
                         </div>
+
                     </div>
                 </div>
             {% endfor %}
@@ -147,7 +150,7 @@
                     {% for projet in projets %}
                         <div class="carousel-item {% if loop.index0 == 0 %} active {% endif %}"
                              data-bs-interval="8000">
-                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#projet_{{ projet.id }}">
                                 {% for image in projet.imagesProjets %}
                                     {% if loop.first %}
                                         <img src="{{ asset('uploads/imgProjet/' ~ image.nomFichier) }}"

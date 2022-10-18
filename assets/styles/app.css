@@ -9,6 +9,10 @@ ul {
     padding-left: 0;
 }
 
+#colorProjet {
+    color: white;
+}
+
 #menu {
     background-image: url("../static/images/backdetente.gif");
     background-size: cover;
@@ -33,6 +37,7 @@ ul {
 #formulate {
     background-image: url("../static/images/backdetente.gif");
     background-size: cover;
+    height: 38em;
 }
 
 .container {
@@ -154,7 +159,7 @@ form {
     width: 50em;
     position: relative;
     left: 22.25em;
-
+    top: 6em;
 }
 
 input {
@@ -173,7 +178,7 @@ textarea {
     background-image: url("../static/images/backconnex.gif");
     background-size: cover;
     height: 37.15em;
-
+    margin-top: 7em;
 }
 
 #projetn1 {
@@ -181,6 +186,7 @@ textarea {
     background-size: cover;
     height: 37.15em;
     color: white;
+    margin-top: 6em;
 }
 
 th, td {
@@ -190,8 +196,14 @@ th, td {
 #projetn2 {
     background-image: url("../static/images/backdetente.gif");
     background-size: cover;
-    height: 37.15em;
+    height: 38.15em;
+    margin-top: 7em;
+}
 
+#titre1 {
+    color: white;
+    position: relative;
+    top: 25px;
 }
 
 #projetn3 {
@@ -211,8 +223,8 @@ th, td {
 #projetn5 {
     background-image: url("../static/images/backdetente.gif");
     background-size: cover;
-    height: 37.15em;
-
+    height: 38.15em;
+    margin-top: 7em;
 }
 
 #projetn6 {
